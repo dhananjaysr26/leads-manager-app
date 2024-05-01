@@ -10,6 +10,8 @@ To start the project
 EXPO_PUBLIC_API_URL=********************
 ```
 >Run the BE and point local to ngrok to get https Backend end point
+[BE Repo link](https://github.com/dhananjaysr26/leads-manager)
+
 ```bash
 ngrok http http://localhost:4000
 ```
