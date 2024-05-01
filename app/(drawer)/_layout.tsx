@@ -4,8 +4,14 @@ import { Drawer } from 'expo-router/drawer';
 
 import { HeaderButton } from '../../components/HeaderButton';
 
+import CustomDrawerContent from '~/common/custom/CustomDrawerContent';
+
 const DrawerLayout = () => (
-  <Drawer>
+  <Drawer
+    drawerContent={CustomDrawerContent}
+    screenOptions={{
+      drawerLabelStyle: { marginLeft: -20 },
+    }}>
     <Drawer.Screen
       name="index"
       options={{
@@ -17,8 +23,8 @@ const DrawerLayout = () => (
     <Drawer.Screen
       name="(tabs)"
       options={{
-        headerTitle: 'Tabs',
-        drawerLabel: 'Tabs',
+        headerTitle: 'Leads',
+        drawerLabel: 'Leads',
         drawerIcon: ({ size, color }) => (
           <MaterialIcons name="border-bottom" size={size} color={color} />
         ),

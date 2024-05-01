@@ -1,7 +1,5 @@
+import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { TabBarIcon } from '~/components/TabBarIcon';
 
 export default function TabLayout() {
   return (
@@ -13,15 +11,17 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Tracker',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="page-layout-header" size={24} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Create Lead',
+          tabBarIcon: ({ color }) => <MaterialIcons name="note-add" size={24} color={color} />,
         }}
       />
     </Tabs>
